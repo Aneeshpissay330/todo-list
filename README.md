@@ -18,7 +18,7 @@ This web application provides a user-friendly interface for managing tasks. You 
 
 7. To clear all pending tasks, click the "Clear All" button (Note: This action is irreversible).
 
-8. Enjoy managing your tasks!
+8. Enjoy managing your tasks with data persistence for a seamless experience!
 
 <!--
 ## Contributions
