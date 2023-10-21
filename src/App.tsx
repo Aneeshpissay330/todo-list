@@ -106,7 +106,7 @@ function App() {
           <Button style={{ marginRight: 10 }} variant="contained" onClick={handleClearAll}>Clear All</Button>
           <Button variant="contained" onClick={handleCompletedAll}>Mark All as Completed</Button>
         </Grid>}
-        <List sx={{ width: '100%', bgcolor: 'background.paper', maxHeight: window.innerHeight * 0.7, overflowY: 'auto', overflowX: 'hidden' }}>
+        <List sx={{ width: '100%', bgcolor: 'background.paper', maxHeight: window.innerHeight * 0.6, overflowY: 'auto', overflowX: 'hidden' }}>
           {tasks.map((task) => (
             <DynamicTaskItem
               key={task.id}
