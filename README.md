@@ -1,27 +1,37 @@
-# React + TypeScript + Vite
+# Todo List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This web application provides a user-friendly interface for managing tasks. You can add, edit, and mark tasks as completed. Additionally, you have the option to complete all tasks at once and clear all pending/completed tasks.
 
-Currently, two official plugins are available:
+## How to Use
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Visit the website: [Todo List App](https://aneeshpissay330.github.io/todo-list/)
 
-## Expanding the ESLint configuration
+2. Enter your desired tasks in the input field and press "Enter" or click the "Add Task" icon.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. To edit a task, click the "Edit" button, make your changes, and click the "Save" button.
 
-- Configure the top-level `parserOptions` property like this:
+4. To mark a task as completed, click the checkbox next to the task.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+5. To delete a task, click the "Delete" button.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+6. To complete all pending tasks, click the "Complete All Tasks" button.
+
+7. To clear all pending tasks, click the "Clear All" button (Note: This action is irreversible).
+
+8. Enjoy managing your tasks!
+
+<!--
+## Contributions
+
+We welcome contributions to this project! If you have any suggestions or want to contribute to the codebase, please feel free to fork the repository, make your changes, and submit a pull request.
+
+## Issues
+
+If you encounter any issues or have suggestions for improvements, please open an issue on the GitHub repository.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+-->
+
+Enjoy using the Todo List App!
