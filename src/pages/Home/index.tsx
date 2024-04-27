@@ -42,7 +42,7 @@ const Home = () => {
     setNewTask(tasks[index].task);
   }
   const handleDelete = (indexToDelete: number) => {
-    const updatedTasks = tasks.filter((task, index) => index !== indexToDelete);
+    const updatedTasks = tasks.filter((_, index) => index !== indexToDelete);
     setTasks(updatedTasks);
   };
   return (
