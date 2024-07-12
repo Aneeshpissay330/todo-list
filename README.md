@@ -1,6 +1,6 @@
 # Todo List App
 
-This is a simple todo list application built with React and React Bootstrap.
+This is a simple todo list application built with React and React Bootstrap, utilizing Redux for local data storage.
 
 ## Features
 

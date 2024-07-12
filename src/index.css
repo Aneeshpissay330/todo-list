@@ -3,30 +3,37 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 #header {
   background-color: #7565a4 !important;
 }
 
 button {
-  background-color: #7565a4 !important;
-  border-color: #7565a4 !important;
+  background-color: #FFA500 !important;
+  border-color: #FFA500 !important;
 }
 
 input::placeholder {
-  color: #7565a4 !important;
+  color: black !important;
 }
 
 input:focus {
-  border-color: #7565a4 !important;
+  border-color: #FFA500 !important;
 }
 
 input {
-  color: #7565a4 !important;
+  color: black !important;
 }
 
-input[type=checkbox]:checked{
-  background-color: #7565a4;
-  border-color: #7565a4;
+input[type=checkbox]:checked {
+  background-color: #FFA500;
+  border-color: #FFA500;
 }
 
 #title {
@@ -45,4 +52,26 @@ i {
   margin-left: 10px;
   margin-right: 10px;
   cursor: pointer;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0D0D0D;
+  /* Assuming neutral-950 corresponds to this color */
+  background: radial-gradient(ellipse 80% 80% at 50% -20%,
+      rgba(120, 119, 198, 0.3),
+      rgba(255, 255, 255, 0));
+}
+
+.developer {
+  color: white;
+}
+
+.developer span {
+  font-weight: 600;
+  color: #FFA500;
 }

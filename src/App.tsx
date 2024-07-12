@@ -12,8 +12,12 @@ function App() {
     },
   ]);
   return (
-    <div>
+    <div className="App">
+      <div className="background"></div>
       <RouterProvider router={router} />
+      <p className="developer">
+        Developed by 🧑‍💻 <span>Aneesh Pissay</span>
+      </p>
     </div>
   )
 }
