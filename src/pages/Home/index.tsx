@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+import { Button, Form, InputGroup } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../app/store';
-import { addTask, editTask, toggleCompleted, deleteTask, initializeTasks } from '../../features/tasks';
-import { InputGroup, Button, Form } from 'react-bootstrap';
+import { addTask, deleteTask, editTask, toggleCompleted } from '../../features/tasks';
 
 const Home: React.FC = () => {
   const tasks = useSelector((state: RootState) => state.tasks.tasks);
