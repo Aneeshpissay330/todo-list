@@ -1,0 +1,46 @@
+import { IconButton } from "@Aneeshpissay330/components-ui";
+import React from "react";
+
+interface TaskItemProps {
+    id: string;
+    title: string;
+    completed?: boolean;
+    onToggle?: (id: string) => void;
+    onEdit?: (id: string) => void;
+    onDelete?: (id: string) => void;
+}
+
+const TaskItem: React.FC<TaskItemProps> = ({
+    id,
+    title,
+    completed = false,
+    onToggle,
+    onEdit,
+    onDelete,
+}) => {
+    const color = completed ? "#F5F5F5" : "#FFFFFF";
+    return (
+        <div
+            id={`task-${id}`}
+            className={`task-item bg-[${color}] border border-medium-gray rounded-2xl p-6 flex items-center space-x-6`}
+            style={{ display: "flex" }}
+        >
+            <div className="flex items-center space-x-4 flex-grow">
+                <span className="material-symbols-outlined" onClick={() => onToggle && onToggle(id)} style={{ cursor: "pointer", color: completed ? "#10b981" : "#9ca3af" }}>
+                    {completed ? "check_circle" : "radio_button_unchecked"}
+                </span>
+                <span className={`text-lg ${completed ? "line-through" : ""}`}>{title}</span>
+            </div>
+            <div className="flex text-darker-gray">
+                <IconButton disabled={completed} onClick={() => onEdit && onEdit(id)} backgroundColor={color} color="#1f2937" icon={<span className="material-symbols-outlined">
+                    edit
+                </span>} />
+                <IconButton onClick={() => onDelete && onDelete(id)} backgroundColor={color} color="#1f2937" icon={<span className="material-symbols-outlined">
+                    delete
+                </span>} />
+            </div>
+        </div>
+    );
+};
+
+export default TaskItem;
