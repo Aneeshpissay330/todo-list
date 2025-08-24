@@ -3,17 +3,19 @@ import storage from "redux-persist/lib/storage"; // localStorage for web
 import { persistReducer, persistStore } from "redux-persist";
 
 import tasksReducer from "../features/tasks";
+import themeReducer from "../features/theme";
 
 // Combine reducers (scalable for future slices)
 const rootReducer = combineReducers({
   tasks: tasksReducer,
+  theme: themeReducer,
 });
 
 // Persist config
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["tasks"], // only persist tasks
+  whitelist: ["tasks", "theme"], // only persist tasks
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

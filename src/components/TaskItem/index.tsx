@@ -1,5 +1,7 @@
 import { IconButton } from "@Aneeshpissay330/components-ui";
 import React from "react";
+import { useAppSelector } from "../../app/hooks";
+import { selectIsDark } from "../../features/theme";
 
 interface TaskItemProps {
     id: string;
@@ -18,11 +20,13 @@ const TaskItem: React.FC<TaskItemProps> = ({
     onEdit,
     onDelete,
 }) => {
-    const color = completed ? "#F5F5F5" : "#FFFFFF";
+    const isDark = useAppSelector(selectIsDark);
+    const textColor = isDark ? "#FFFFFF" : "#1F2937";   // semantic: text color
+    const fillColor = isDark ? "#1F2937" : "#FFFFFF";   // semantic: background/fill
     return (
         <div
             id={`task-${id}`}
-            className={`task-item bg-[${color}] border border-medium-gray rounded-2xl p-6 flex items-center space-x-6`}
+            className={`task-item bg-white dark:bg-[#1F2937] border border-medium-gray rounded-2xl p-6 flex items-center space-x-6`}
             style={{ display: "flex" }}
         >
             <div className="flex items-center space-x-4 flex-grow">
@@ -32,10 +36,10 @@ const TaskItem: React.FC<TaskItemProps> = ({
                 <span className={`text-lg ${completed ? "line-through" : ""}`}>{title}</span>
             </div>
             <div className="flex text-darker-gray">
-                <IconButton disabled={completed} onClick={() => onEdit && onEdit(id)} backgroundColor={color} color="#1f2937" icon={<span className="material-symbols-outlined">
+                <IconButton disabled={completed} onClick={() => onEdit && onEdit(id)} backgroundColor={fillColor} color={textColor} icon={<span className="material-symbols-outlined">
                     edit
                 </span>} />
-                <IconButton onClick={() => onDelete && onDelete(id)} backgroundColor={color} color="#1f2937" icon={<span className="material-symbols-outlined">
+                <IconButton onClick={() => onDelete && onDelete(id)} backgroundColor={fillColor} color={textColor} icon={<span className="material-symbols-outlined">
                     delete
                 </span>} />
             </div>
